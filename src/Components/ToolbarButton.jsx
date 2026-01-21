@@ -1,22 +1,22 @@
 import React from 'react';
 
-const ToolbarButton = ({ onClick, title, children, isActive }) => {
+const ToolbarButton = ({ onClick, title, children }) => {
   return (
     <button
       onClick={onClick}
       title={title}
-      className={`
-        px-3 py-2 mx-1 rounded-lg font-semibold text-sm
-        transition-all duration-200 ease-in-out
-        ${isActive 
-          ? 'bg-blue-600 text-white shadow-md' 
-          : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
-        }
-        hover:shadow-lg active:scale-95
-      `}
+      style={{
+        padding: '6px 10px',
+        margin: '0 2px',
+        border: '1px solid #ccc',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '14px'
+      }}
     >
       {children}
     </button>
   );
 };
+
 export default ToolbarButton;

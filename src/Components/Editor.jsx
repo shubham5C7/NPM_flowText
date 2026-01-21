@@ -7,17 +7,14 @@ const Editor = React.forwardRef(({ onInput, onKeyDown }, ref) => {
       contentEditable
       onInput={onInput}
       onKeyDown={onKeyDown}
-      className="
-        min-h-[300px] p-5 
-        bg-white text-gray-800
-        focus:outline-none focus:ring-2 focus:ring-blue-400
-        text-base leading-relaxed
-      "
       style={{
-        // Custom placeholder style (shown when editor is empty)
-        empty: 'before:content-[attr(data-placeholder)] before:text-gray-400'
+        minHeight: '300px',
+        padding: '20px',
+        border: '1px solid #ccc',
+        borderRadius: '5px',
+        fontSize: '16px'
       }}
-      data-placeholder="Start typing... Use @ to mention someone"
+      data-placeholder="Start typing..."
     ></div>
   );
 });

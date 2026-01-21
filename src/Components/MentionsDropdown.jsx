@@ -1,5 +1,3 @@
-import React from 'react';
-
 const MentionsDropdown = ({ mentions, selectedIndex, onSelect }) => {
   return (
     <div style={{
